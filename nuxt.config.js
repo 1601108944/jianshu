@@ -10,13 +10,13 @@ module.exports = {
       { hid: 'description', name: 'description', content: '我自己的简书' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon .ico' }
     ]
   },
   /*
   ** Global CSS
   */
-  css: ['~/assets/css/main.css','~/assets/css/normalize.css','~/assets/css/animate.css','~/assets/css/font-awesome.min.css'],
+  css: ['~/assets/css/main.css','~/assets/css/animate.css','~/assets/css/font-awesome.css'],
   /*
   ** Add axios globally
   */
