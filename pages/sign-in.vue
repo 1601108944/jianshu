@@ -13,7 +13,7 @@
                 <h4>
                     <nuxt-link class="active" to="/sign-in">登录</nuxt-link>
                     ·
-                    <nuxt-link class="" to="/sign-out">注册</nuxt-link>
+                    <nuxt-link class="" to="/sign-up">注册</nuxt-link>
                 </h4>
             </div>
             <!--form表单-->
@@ -35,24 +35,24 @@
                      </div>
 
                     <nuxt-link class="help" to="/">登录遇到问题?</nuxt-link>
-                    <button>登录</button>
+                    <button class="sign-in-btn">登录</button>
                 </form>
             </div>
             <!--第三方登录-->
             <div class="more-sign">
                 <p>社交账号登录</p>
                 <ul>
-                    <li>
+                    <li class="weixin">
                         <nuxt-link to="/">
                             <i class="fa fa-weixin"></i>
                         </nuxt-link>
                     </li>
-                    <li>
+                    <li class="weibo">
                         <nuxt-link to="/">
                             <i class="fa fa-weibo"></i>
                         </nuxt-link>
                     </li>
-                    <li>
+                    <li class="qq">
                         <nuxt-link to="/">
                             <i class="fa fa-qq"></i>
                         </nuxt-link>
