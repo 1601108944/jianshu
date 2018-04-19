@@ -104,7 +104,7 @@ body {
   border: 1px solid #c8c8c8;
   border-radius: 2px;
   background-color: rgb(248, 248, 248);
-  border-bottom: 0;
+  /* border-bottom: 0;  */
 }
 .sign .main form .input-prepend:nth-of-type(1) input {
   border-bottom: 0;
