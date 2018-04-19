@@ -12,13 +12,13 @@
         </nuxt-link>
 
         <!-- 登陆用户信息 -->
-        <div class="user">
+        <div class="user" @mouseover="isShow=true" @mouseout="isShow=false">
               <div class="drop-down">
                <nuxt-link to="/u123" class="avatar">
               <img src="../assets/img/default-avatar.jpg" alt="">
                </nuxt-link>
               </div>
-              <ul class="drop-menu">
+              <ul class="drop-menu" v-show="isShow">
                   <li>
                      <nuxt-link to="/user/123">
                       <i class="fa fa-home"></i>
@@ -60,7 +60,12 @@
 
 <script>
 export default {
-  name: "myHeader"
+  name: "myHeader",
+  data(){
+      return{
+          isShow:false
+      }
+  }
 };
 </script>
 
@@ -100,6 +105,7 @@ nav .logo {
 nav .logo img {
   height: 100%;
 }
+
 nav .write-btn{
     float: right;
     width: 100px;
@@ -128,6 +134,10 @@ nav .user .avatar{
     height: 40px;
     margin: 8px 28px 8px 20px;
 }
+
+nav .user:hover{
+    background: #f5f5f5;
+}
 nav .user .avatar:before{
     content:'';
     position: absolute;
@@ -143,5 +153,31 @@ nav .user .avatar img {
     border-radius: 50%;
     border:1px solid #eee;
 }
+nav .user .drop-menu{
+    position: absolute;
+    box-shadow: 0 0 8px rgb(0, 0, 0,.1);
+    min-width: 160px;
+    z-index: 999;
+    margin: 0;
+    padding: 10px 0;
+    font-size: 15px;
+}
+nav .user .drop-menu li a{
+    padding:10px 20px ;
+    display: block;
+    line-height: 30px;
+}
+nav .user .drop-menu li a i{
+    margin-right: 12px;
+    color: #ea6f5a;
+    width: 20px;
+    height: 20px;
+    font-size: 20px;
+    display: inline-block;
+}
+nav .user .drop-menu li a:hover{
+    background: #f5f5f5;
+}
+
 </style>
 
