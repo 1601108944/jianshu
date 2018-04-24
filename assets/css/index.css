@@ -51,3 +51,197 @@
     margin-bottom: 15px;
     margin-top: -5px;
 }
+.note-list li {
+    position: relative;
+    width: 100%;
+    padding: 0 0 17px;
+    margin: 0 0 17px;
+    border-top: 1px solid #f0f0f0;
+}
+
+.note-list li .wrap-img{
+    position: absolute;
+    top: 50%;
+    right: 0;
+    /* width: 150px;
+    height: 120px; */
+    margin-top: -60px;
+}
+.note-list li .warp-img img{
+    max-width: 100%;
+    height: auto;
+    display: inline-block;
+}
+
+.note-list li.have-img>div{
+padding-right: 160px;
+}
+.note-list .authod{
+    padding-top: 10px;
+    font-size: 13px;
+    margin-bottom: 14px;
+    vertical-align: middle;
+}
+.note-list .authod .avatar{
+    display: inline-block;
+
+    margin-right: 5px;
+    vertical-align: middle;
+}
+ .avatar img{
+    max-width: 100%;
+    width: 32px;
+    height: 32px;
+    /* height: auto; */
+    display: inline-block;
+    border-radius: 50%;
+    border: 1px solid #ddd;
+}
+.note-list .authod .info{
+    display: inline-block;
+    vertical-align: middle;
+   
+}
+li{
+    line-height: 20px;
+}
+.note-list .authod .nickname{
+    vertical-align: middle;
+}
+.note-list .authod .time{
+  color: #969696;
+  vertical-align: middle;
+  padding-left: 5px;
+}
+.note-list .title{
+    display: block;
+    margin: 7px 0 4px;
+    font-size: 18px;
+    line-height: 1.5;
+    font-weight: 700;
+}
+.note-list .title:hover{
+    text-decoration: underline
+}
+.note-list .abstruct{
+    margin-bottom: 10px;
+    font-size: 13px;
+    line-height: 24px;
+}
+.note-list .meta{
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+}
+
+.note-list .meta .collection-tag{
+    display: inline-block;
+    padding: 0 5px;
+    color: #ea6f5a;
+    border: 1px solid #ea6f5a;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-right: 5px;
+    vertical-align: middle;
+    border-radius: 3px;
+    transition: all .1 ease-in;
+}
+.note-list .meta .collection-tag:hover{
+    background: rgb(236, 97, 73,.05);
+   color: #ec6149!important;
+   border-color: #ec6149;
+}
+.note-list .meta a:hover{
+    color: #787878;
+}
+.note-list .meta span{
+    color: #b4b4b4;
+}
+
+.index .main .load-more{
+    display: block;
+    width: 100%;
+    height: 40px;
+    background: #a5a5a5;
+    color: #fff;
+    padding: 10px 15px;
+    margin: 30px auto 60px;;
+    text-align: center;
+    border-radius: 20px;
+    font-size: 15px;
+    /* line-height: 40px; */
+}
+.index .main .load-more:hover{
+    background: #888;
+}
+
+.index .aside .board{
+    padding-bottom: 6px;
+}
+.index .aside .board a{
+    display: block;
+}
+.index .aside .board img{
+    width: 100%;
+    border-radius: 4px;
+}
+.index .aside .recommended-author {
+    margin-top:20px;
+    margin-bottom:20px;
+    font-size:13px;
+    text-align:center;
+}
+.index .aside .recommended-author .title {
+    text-align:left;
+}
+.index .aside .recommended-author .title span{
+    color:#969696;
+}
+.index .aside .recommended-author .title .page-change {
+    color:#969696;
+    float:right;
+}
+.index .aside .recommended-author .title .page-change:hover {
+    color:#787878;
+   
+}
+.index .aside .recommended-author .recommended-list {
+    text-align:left;
+    margin-bottom:20px;
+}
+.index .aside .recommended-author .recommended-list li {
+    margin-top:15px;
+}
+.index .aside .recommended-author .recommended-list li .avatar {
+    float:left;
+    width:48px;
+    height:48px;
+    margin-right:10px;
+}
+.index .aside .recommended-author .recommended-list li .follow {
+    margin-top:5px;
+    float:right;
+    font-size:13px;
+    color:#42c02e;
+}
+.index .aside .recommended-author .recommended-list li .name {
+    margin-right:60px;
+    font-size:14px;
+    display:block;
+    padding-top:5px;
+}
+.index .aside .recommended-author .recommended-list li p {
+    margin:2px 0 5px 0;
+    color:#969696;
+    font-size:12px;
+}
+.index .aside .recommended-author .find-more {
+    display:block;
+    width:100%;
+    padding:7px 7px 7px 18px;
+    border:1px solid #dcdcdc;
+    background:#f7f7f7;
+    color:#787878;
+    text-align:center;
+}
