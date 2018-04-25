@@ -53,7 +53,12 @@
                                             </span>
                                         </div>
                                     </div>
-                                    <div class="title">你为什么写作？我写作是为了挣钱，你呢？</div>
+                                    <div class="title">
+                                        <nuxt-link to="/p/123">
+                                             你为什么写作？我写作是为了挣钱，你呢？
+                                        </nuxt-link>
+                                      
+                                        </div>
                                     <div class="abstruct">壹 热门文章的作者都到哪里去了？故事专题最热的文章是《对啊，就是嫌你穷才分手的啊》，作者七毛就是我，最新的作品是2016.11；还有宋小君、入江之鲸等等，他们都在简书里消失了..</div>
                                     
                                     <div class="meta">
@@ -137,20 +142,22 @@
                         <div class="recommended-author">
                             <div class="title">
                                 <span>推荐作者</span>
-                                <nuxt-link class="page-change" to="/">
-                                    <i class="fa fa-refresh "></i>
+
+                                <a href="#" class="page-change" @click="rotated+=360">
+
+                                    <i class="fa fa-refresh" id="tubiao" :style="{'transform':'rotate('+rotated+'deg)'}"></i>
                                     换一批
-                                </nuxt-link>
+                                </a>
                             </div>
                             <ul class="recommended-list">
                                 <li>
                                     <nuxt-link class="avatar" to="/u/123">
                                         <img src="../assets/img/default-avatar.jpg">
                                     </nuxt-link>
-                                    <a href="#" class="follow">
-                                        <i class="fa fa-plus"></i>
-                                        关注
-                                    </a>
+                                    <!-- <a href="#" :class="[a?'follow':'follow-a']" v-on:click="a=!a" v-on:mouseenter="b=!b" v-on:mouseleve="b=!b">
+                                        <i :class="[a?'fa fa-plus':b?'fa fa-check':'fa fa-close']"></i>
+                                       {{a?"关注":b?"已关注":"已关注"}}
+                                    </a> -->
                                     <nuxt-link to="/u/123" class="name">
                                         简书用户
                                     </nuxt-link>
@@ -249,10 +256,12 @@ export default {
     },
   data() {
       return{
-          naem:'首页'
+          name:'首页',
+          rotated:90,
       }
   }
 };
+
 </script>
 
 <style scoped>
