@@ -245,3 +245,7 @@ li{
     color:#787878;
     text-align:center;
 }
+
+#tubiao{
+    transition: all 1.2s;
+}
