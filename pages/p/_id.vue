@@ -93,10 +93,10 @@
                          <i class="fa fa-weibo"></i>
                      </a>
                         <a href="#" class="share-btn">
-                         <i class="fa fa-weixin"></i>
+                         <i class="fa fa-qq"></i>
                      </a>
                         
-                        <a href="#" class="more-share">
+                        <a href="#" class="share-btn more-share">
                          更多分享
                      </a>
                  </div>

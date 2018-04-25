@@ -393,12 +393,16 @@ li{
 .note .post .meta-bottom .like {
     display:inline-block;
     position:relative;
+    border:1px solid #EA6F5A;
+    border-radius: 40px;
+}
+.note .post .meta-bottom .like:hover{
+    background: rgb(254, 246, 247)
 }
 .note .post .meta-bottom .like .like-btn {
+    display: inline-block;
     padding:13px 0 15px 0;
-    border:1px solid #EA6F5A;
     font-size:0;
-    border-radius: 40px;
 }
 .note .post .meta-bottom .like .like-btn:before {
     content:'';
@@ -417,3 +421,55 @@ li{
     color:#ea6f5a;
     font-size:19px;
 }
+.note .post .meta-bottom .like .like-num{
+    display: inline-block;
+    font-size: 18px;
+    border-left: 1px solid #ea6f5a;
+}
+.note .post .meta-bottom .like .like-num a {
+   
+    padding:18px 26px 18px 18px ;
+    color: #EA6F5A;
+}
+
+.note .post .meta-bottom .share{
+    float: right;
+    margin-top: 5px;
+    
+}
+.note .post .meta-bottom .share .share-btn{
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    text-align: center;
+    border: 1px solid #dcdcdc;
+    border-radius: 50%;
+    margin-left: 5px;
+    vertical-align: middle;
+}
+.note .post .meta-bottom .share .share-btn i {
+    font-size: 24px;
+    line-height: 2;
+    transition: all 1s;  
+}
+
+i.fa-weixin{
+    color: #00bb29;
+   }
+i.fa-weibo  {
+     color: #e05244;
+   }
+ i.fa-qq {
+     color: #498ad5;
+   }
+
+.note .post .meta-bottom .share .more-share{
+    width: auto;
+    padding: 4px 18px;
+    font-size: 14px;
+    border-radius: 40px;
+    line-height: 40px;
+    text-align: center;
+    color: #9b9b9b;
+}
+
