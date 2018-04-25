@@ -72,8 +72,6 @@
                    
                </div>
 
-
-
                 <!--  更多分享 -->
              <div class="meta-bottom">
                  <div class="like">
@@ -104,12 +102,15 @@
 
 
              </div>
+             <!-- 留言组件 -->
+             <my-comment></my-comment>
         </div>
     </div>
 </div>
 </template>
 
 <script>
+import myComment from'~/components/myComment'
     import myHeader from '~/components/myHeader'
     export default {
 
@@ -127,7 +128,8 @@
             }
         },
         components:{
-          myHeader
+          myHeader,
+          myComment
         }
     }
 </script>
