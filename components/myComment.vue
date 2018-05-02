@@ -40,7 +40,7 @@
                     <p>支持一下，消灭零评论</p>
                     <div class="tool-group">
                         <a href="#" class="like-btn">
-                            1人赞
+                            <span>1人赞</span>
                         </a>
                         <a href="#" class="comment-btn">
                             <i class="fa fa-comment-o"></i>
@@ -48,12 +48,45 @@
                         </a>
                     </div>
                 </div>
-                <div class="sub-comment-list"></div>
+                <div class="sub-comment-list">
+                  <div class="sub-comment">
+                    <div class="sub-comment-content">
+                      <div class="v-tooltip-container">
+                            <nuxt-link to="/">
+                                Snail99
+                            </nuxt-link>
+                            :
+                          <span>
+                        <a href="#" class="maleskine">
+                          @教学平台杨教授
+                        </a>
+                        恭喜你啊!
+                      </span>
+                      </div>
+
+                    </div>
+                    <div class="sub-tool-group">
+                          <span>2018.12.24 22:01</span>
+                          <a href="#">
+                            <i class="fa fa-comment"></i>
+                            <span>回复</span>
+                          </a>
+                    </div>
+                  </div>
+                  <div class="sub-comment more-comment">
+                    <a href="#" class="more-comment-btn">
+                      <i class="fa fa-edit"></i>
+                      <span>添加新评论</span>
+                    </a>
+                  </div>
+                  <my-form></my-form>
+                </div>
             </div>
         </div>
     </div>
 </template>
 <script>
+
 import myForm from '../components/myForm'
 export default {
   data() {
@@ -304,5 +337,117 @@ export default {
     padding: 20px 0 30px 0;
     border-bottom: 1px solid #f0f0f0;
 }
+.comment-list .comment .author{
+  margin-bottom: 20px;
+}
+.comment-list .comment .v-tooltip-comment{
+  display: inline-block;
+}
+.comment-list .comment .author .avatar{
+  width: 38px;
+  height: 38px;
+  display: inline-block;
+  vertical-align: middle;
+  margin-right: 10px;
+}
+.comment-list .comment .author .info{
+  display: inline-block;
+  vertical-align: middle;
+}
+.comment-list .comment .author .info .name{
+  font-size: 15px;
+}
+.comment-list .comment .author .info .meta{
+  font-size: 12px;
+  color: #969696;
+}
+.comment-list .comment .comment-wrap p {
+  font-size: 16px;
+  margin: 10px 0;
+  word-break: break-all;
+  line-height: 1.7;
+}
+.comment-list .comment .comment-wrap .like-btn{
+  padding-left: 23px;
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+  font-size: 0;
+  color: #969696;
+  position: relative;
+}
+.comment-list .comment .comment-wrap .like-btn:before{
+  content: '';
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: -16px;
+  top: -16px;
+  background: url(../assets/img/zan.png);
+  background-repeat: no-repeat;
+  background-position: left;
+  background-size: 1050px 50px;
+
+}
+.comment-list .comment .comment-wrap .like-btn span{
+  font-size: 14px;
+  color: #969696;
+}
+.comment-list .comment .comment-wrap .comment-btn{
+  font-size: 14px;
+  color: #969696;
+}
+.comment-list .comment .comment-wrap .comment-btn i{
+  font-size: 18px;
+  margin-right: 10px;
+}
+
+.comment-list .sub-comment-list{
+  margin: 20px 0 0 5px;
+  padding: 5px 0 5px 20px;
+  border-left: 2px solid #d9d9d9;
+}
+.comment-list .sub-comment-list .sub-comment{
+  padding-bottom: 15px;
+  margin-bottom: 15px;
+  border: 1px dashed #f0f0f0;
+}
+.comment-list .sub-comment-list .sub-comment .sub-comment-content{
+  font-size: 14px;
+  line-height: 1.5;
+   margin-top: 5px;
+}
+.comment-list .sub-comment-list .sub-comment a{
+  color: #3194d0;
+}
+.comment-list .sub-comment-list .sub-comment .sub-tool-group{
+  font-size: 12px;
+  color: #969696;
+}
+.comment-list .sub-comment-list .sub-comment .sub-tool-group a{
+  margin-left: 10px;
+  color: #969696;
+}
+.comment-list .sub-comment-list .sub-comment .sub-tool-group a i{
+  margin-right: 5px;
+  font-size: 5px;
+}
+.comment-list .sub-comment-list .more-comment {
+  border: 0;
+  font-size: 14px;
+}
+.comment-list .sub-comment-list .more-comment a{
+  color: #969696;
+}
+.comment-list .sub-comment-list .more-comment a:hover{
+   color: #333;
+}
+.comment-list .sub-comment-list .more-comment a i{
+  margin-right: 5px;
+}
+.comment-list .sub-comment-list form{
+  margin: 0;
+}
 </style>
 
+                                        

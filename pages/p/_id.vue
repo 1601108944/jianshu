@@ -74,33 +74,54 @@
 
                 <!--  更多分享 -->
              <div class="meta-bottom">
-                 <div class="like">
+                 <div class="like" :class="{'isLike':islike}" @click="islike = !islike; islike?number+=1:number-=1">
                      <div class="like-btn">
-                         <a href="#">喜欢</a>
+                         <a>喜欢</a>
                      </div>
                      <div class="like-num">
-                         <a href="#">50</a>
+                         <a>{{number}}</a>
                      </div>
                  </div>
-
                  <div class="share">
-                     <a href="#" class="share-btn">
+                     <a href="javaScript:viod(0)" class="share-btn" v-tooltip = "'分享到微信'">
                          <i class="fa fa-weixin"></i>
                      </a>
-                     <a href="#" class="share-btn">
+                     <a href="javaScript:viod(0)" class="share-btn"  v-tooltip = "'分享到微博'">
                          <i class="fa fa-weibo"></i>
                      </a>
-                        <a href="#" class="share-btn">
+                        <a href="javaScript:viod(0)" class="share-btn"  v-tooltip = "'分享到QQ'">
                          <i class="fa fa-qq"></i>
                      </a>
-                        
-                        <a href="#" class="share-btn more-share">
-                         更多分享
-                     </a>
+                      
+                    <v-popover class="share-btn more-share">
+                       <a href="javaScript:viod(0)">更多分享</a>
+
+                        <template slot="popover">
+                           <li> 
+                               <i></i>
+                               <span v-close-popover="myBooleanProp">分享到qq空间</span>
+                           </li>
+                           <li>
+                               <i></i>
+                               <span v-close-popover="myBooleanProp">分享到Twitter</span>
+                           </li>
+                           <li>
+                               <i></i>
+                               <span v-close-popover="myBooleanProp">分享到Facebook</span>
+                           </li>
+                           <li>
+                               <i></i>
+                               <span v-close-popover="myBooleanProp">分享到Google+</span>
+                           </li>
+                           <li>
+                               <i></i>
+                               <span v-close-popover="myBooleanProp">分享到豆瓣</span>
+                           </li>
+                        </template>
+                  </v-popover>
+                       
                  </div>
-
-
-
+ 
              </div>
              <!-- 留言组件 -->
              <my-comment></my-comment>
@@ -109,7 +130,9 @@
 </div>
 </template>
 
+
 <script>
+
 import myComment from'~/components/myComment'
     import myHeader from '~/components/myHeader'
     export default {
@@ -124,12 +147,18 @@ import myComment from'~/components/myComment'
         },
         data(){
             return{
-
+                islike:false,
+                number:50,
+                myBooleanProp: false,
+                
             }
         },
         components:{
           myHeader,
           myComment
-        }
-    }
+        },
+
+}
 </script>
+
+

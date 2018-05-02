@@ -395,9 +395,12 @@ li{
     position:relative;
     border:1px solid #EA6F5A;
     border-radius: 40px;
+    user-select: none;
+    
 }
 .note .post .meta-bottom .like:hover{
-    background: rgb(254, 246, 247)
+    background: rgb(254, 246, 247);
+    cursor: pointer;
 }
 .note .post .meta-bottom .like .like-btn {
     display: inline-block;
@@ -415,6 +418,27 @@ li{
     background-position:left;
     background-repeat: no-repeat;
     background-size:1000px 50px;
+}
+
+.note .post .meta-bottom .like.isLike .like-btn:before{
+    animation: changeLike 0.6s steps(19) forwards;
+    }
+    @keyframes changeLike{
+        0%{
+                background-position: left;
+        }
+        100%{
+                background-position: right;
+        }
+    }
+.note .post .meta-bottom .like.isLike .like-btn a,.note .post .meta-bottom .like.isLike .like-num a{
+        color: white;
+}
+.note .post .meta-bottom .like.isLike .like-num {
+    border-left-color: white;
+}
+.note .post .meta-bottom .like.isLike {
+    background: #ea6f5a;
 }
 .note .post .meta-bottom .like .like-btn a {
     padding:18px 30px 18px 55px;
@@ -435,6 +459,7 @@ li{
 .note .post .meta-bottom .share{
     float: right;
     margin-top: 5px;
+    position: relative;
     
 }
 .note .post .meta-bottom .share .share-btn{

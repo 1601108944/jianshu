@@ -2,10 +2,10 @@
     <div>
         <form class="new-comment" method="post">
             <slot></slot>
-            <textarea name="comment-content" placeholder="写下你的评论"></textarea>
+            <textarea name="comment-content" placeholder="写下你的评论" v-model="value"></textarea>
             <div class="write-function-block">
                 <div class="emoji-modal-wrap">
-                    <a href="#" class="emoji">
+                    <a  class="emoji" @click="isShow=!isShow">
                         <i class="fa fa-smile-o"></i>
                     </a>
                     <div class="emoji-modal"></div>
@@ -14,18 +14,32 @@
                 <a href="#" class="btn-send">发送</a>
                 <a href="#" class="btn-cancel">取消</a>
             </div>
+           <emoji v-show="isShow" @select="setctEmoji"></emoji>
         </form>
+    
     </div>
+    
 </template>
 
 <script>
+   import emoji from './emoji'
     export default {
-        
-           data(){
+        name:'myForm',
+        data(){
         return{
-        name:'myForm'
+         isShow:false,
+         value:''
+        }
+    },
+    components:{
+        emoji
+    },
+    methods:{
+        setctEmoji(code){
+            this.showEmoji = false
+            this.value += code
         }
     }
-    }
+}
  
 </script>
